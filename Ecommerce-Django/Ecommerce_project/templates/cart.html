@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block metadescription %}
+    search result
+{% endblock %}
+
+{% block title %}
+    search
+{% endblock %}
+
+{% block content %}
+    {% if not Cart_item %}
+        <div>
+            <h1>Your shopping cart is empty</h1>
+            <a href="{% url 'Ecommerce_app:allProducts' %}">See all products</a>
+        </div>
+    {% else %}
+        <div class="container mt-5 cart-container">
+            <h1>Shopping Cart</h1>
+            <table class="table table-bordered cart-table">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Item</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for cart_items in Cart_item %}
+                        <tr>
+                            <td>
+                                <a href="{{ cart_items.product.get_absolute_url }}">
+                                    <img class="cartimg" src="{{ cart_items.product.image.url }}" >
+                                </a>
+                            </td>
+                            <td>{{ cart_items.product.name }}</td>
+                            <td>{{ cart_items.product.price }}</td>
+                            <td>{{ cart_items.quantity }}</td>
+                            <td>{{ cart_items.quantity }} X {{ cart_items.product.price }} = {{ cart_items.sub_total }}</td>
+                            <td>
+                                <a href="{% url 'cart:add_cart' cart_items.product.id %}">
+                                    <i class="fa-solid fa-plus"></i>
+                                </a>
+                                &nbsp;
+                                <a href="{% url 'cart:remove_cart' cart_items.product.id %}" class="">
+                                    <i class="fa-solid fa-minus"></i>
+                                </a>
+                                &nbsp;
+                                <a href="{% url 'cart:delete_cart_item' cart_items.product.id %}" class="">
+                                    <i class="fa-solid fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div class="cart-total text-center mt-3">
+                <strong>Total: $<span id="cartTotal">{{total }}</span></strong>
+            </div>
+            <div class="cart-actions mt-3">
+                <button class="btn btn-primary">Continue Shopping</button>
+                <button class="btn btn-success">Checkout</button>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

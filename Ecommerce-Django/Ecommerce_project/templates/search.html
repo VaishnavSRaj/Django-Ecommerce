@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block metadescription %}
+    search result
+{% endblock %}
+
+{% block title %}
+    search
+{% endblock %}
+
+{% block content %}
+
+<div>
+    <p>you have searched {{query}}</p>
+</div>
+
+<div class="products-section">
+    {% for product in products%}
+
+
+      <div class="card" style="width: 18rem;">
+          <a href="{{ product.get_url }}"><img src="{{product.image.url}}" class="card-img-top" alt="{{product.name}}"></a>
+
+  <div class="card-body">
+    <p class="card-text">{{product.name}}</p>
+    <p class="card-text">{{product.price}}</p>
+  </div>
+</div>
+    {% empty %}
+    <div><p>0 result found</p></div>
+       {% endfor %}
+  </div>
+
+{% endblock %}

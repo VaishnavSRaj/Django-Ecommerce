@@ -1,0 +1,390 @@
+/* Reset some default styles to ensure consistency */
+body, header, img {
+  margin: 0;
+  padding: 0;
+  border: none;
+
+}
+
+
+
+body{
+  letter-spacing:.2em;
+  text-transform : uppercase;
+}
+
+
+
+
+
+/* Style the header container and center its contents */
+.header-container {
+  background-color: #181c24; /* Add any desired background color */
+  text-align: center;
+  padding: 5px; /* Add padding around the logo */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow if desired */
+}
+
+/* Style the logo */
+.header-container img {
+  max-width: 150px; /* Ensure the logo doesn't exceed its original size */
+}
+
+.navbar{
+background-color:#282c3c;}
+
+/* Reset some default styles to ensure consistency */
+body, h1, h2, h3, h4, p, ul, li, a {
+  margin: 0;
+  padding: 0;
+  border: none;
+  list-style: none;
+  text-decoration: none;
+ font-family: 'Roboto', sans-serif
+}
+
+
+
+/* Reset some default styles to ensure consistency */
+body, h1, h2, h3, h4, p, ul, li, a, img {
+  margin: 0;
+  padding: 0;
+  border: none;
+  list-style: none;
+  text-decoration: none;
+ font-family: 'Roboto', sans-serif
+}
+
+/* Style the main content container */
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Style the category information section */
+.category-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Style the category details section */
+.category-details {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.category-details img {
+  max-width: 100%;
+}
+
+.category-details h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.category-details p {
+  font-size: 16px;
+}
+
+/* Style the banner section */
+.banner-section {
+  text-align: center;
+  margin-bottom: 20px;
+
+}
+
+.banner-section img {
+  max-width: 100%;
+}
+
+/* Style the collections section */
+.collections-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.collections-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.collections-section p {
+  font-size: 16px;
+}
+
+/* Style the products section */
+.products-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+
+
+.product-card {
+ color:black;
+ font_size:10 px;
+ text-decoration:none;
+padding-bottom:50px;
+align-items:center;
+
+}
+
+
+/* Style the individual product items */
+.card{
+
+  align-items: center;
+  padding:5px;
+}
+
+
+
+.nav-link{
+color:white;
+}
+
+
+.card-text {
+
+  font-size: 16px;
+  margin-bottom: 5px;
+  letter-spacing:.1em;
+  text-transform : uppercase;
+
+}
+
+.product-details h4:last-child {
+  color: #e91e63; /* Change this to your desired price color */
+}
+/* Reset some default styles to ensure consistency */
+
+
+.dropdown-item, .nav-item{
+letter-spacing:.2em;
+text-transform : uppercase;
+
+}
+
+.product-title{
+font-size:30px;
+text-transform:uppercase;
+letter-spacing:.2rem;
+padding-top:15px;
+padding-bottom:10px
+}
+
+.product-description{
+padding-right:20px;
+font-size:14px;
+}
+
+.product-price{
+padding-bottom:8px;
+}
+
+/* Style the footer */
+.footer {
+  background-color: #181c24; /* Change this to your desired footer background color */
+  color: #fff; /* Change this to your desired text color */
+  text-align: center;
+  padding: 20px;
+}
+
+/* Style the footer content */
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer p {
+  font-size: 14px;
+}
+
+/* Style the footer links */
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footer-links li:last-child {
+  margin-right: 0;
+}
+
+.footer-links a {
+  color: #fff; /* Change this to your desired link color */
+  font-size: 14px;
+}
+
+/* Hover effect for footer links */
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs{
+margin:15px;
+}
+
+/* Container for the product image */
+.product-image-container {
+  min-width: 10rem; /* Set a minimum width for the container */
+  max-width: 50%; /* Ensure the container doesn't exceed its parent's width */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 1rem; /* Add some padding around the image */
+  box-sizing: border-box; /* Include padding in the total width of the container */
+}
+
+/* The product image */
+.product-image {
+  display: block; /* Ensure the image is a block element */
+  width: 100%; /* Make the image take up the full width of its container */
+  height: auto; /* Preserve the aspect ratio of the image */
+}
+
+/* Optional: Add a border and shadow to the container for a nicer look */
+.product-image-container {
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cart-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .cart-container h1 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .cart-table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    .cart-table th,
+    .cart-table td {
+      padding: 12px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .cart-table th {
+      background-color: #f2f2f2;
+    }
+
+    .cart-table tr:hover {
+      background-color: #f2f2f2;
+    }
+
+    .cart-total {
+      font-weight: bold;
+    }
+
+    .cart-actions {
+      display: flex;
+      justify-content: center;
+    }
+
+    .cart-actions button {
+      margin: 5px;
+    }
+
+
+    /* styles.css */
+
+/* Center the content vertically and horizontally */
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+}
+
+/* Style for the cart table */
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.cart-table th,
+.cart-table td {
+    padding: 10px;
+    text-align: center;
+}
+
+.cart-table th {
+    background-color: #f8f9fa;
+}
+
+.cart-table img {
+    max-width: 80px;
+    max-height: 80px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Style for the cart total section */
+.cart-total {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* Style for the cart actions buttons */
+.cart-actions {
+    margin-top: 20px;
+}
+
+/* Add some spacing around the buttons */
+.cart-actions .btn {
+    margin-right: 10px;
+}
+
+/* Style for the "Empty Cart" message */
+.empty-cart {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 768px) {
+    .cart-table img {
+        max-width: 60px;
+        max-height: 60px;
+    }
+
+    .cart-table th,
+    .cart-table td {
+        padding: 8px;
+    }
+
+    .cart-total {
+        font-size: 16px;
+    }
+}
+
+.cartimg {
+    max-width: 80px;
+    max-height: 80px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+

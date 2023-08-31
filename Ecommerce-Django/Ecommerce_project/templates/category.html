@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block metadescription %}
+    {% if category %}
+       {{category.description|truncatewords:150}}
+    {% else %}
+       Welcome to category page
+    {% endif %}
+{% endblock %}
+
+{% block title %}
+   {% if category %}
+      {{category.name}}
+   {% else %}
+      See our new collections
+   {% endif %}
+{% endblock %}
+
+{% block content %}
+<div class="main-content">
+  {% if category %}
+    <div class="category-info">
+      <a href="{% url 'Ecommerce_app:allProducts' %}">See all products</a>
+    </div>
+    <div class="category-details">
+      <img src="{{category.image.url}}" alt="{{category.name}}">
+      <h2>{{category.name}}</h2>
+      <p>{{category.description}}</p>
+    </div>
+  {% else %}
+    <div class="banner-section">
+      <img src="{% static 'img/amazonbanner.jpg' %}">
+    </div>
+    <div class="collections-section">
+      <h2>Our collections</h2>
+      <p>
+        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,
+      </p>
+    </div>
+  {% endif %}
+
+  <div class="products-section">
+    {% for product in products.object_list %}
+
+
+      <div class="card" style="width: 18rem;">
+          <a href="{{ product.get_url }}"><img src="{{product.image.url}}" class="card-img-top" alt="{{product.name}}"></a>
+
+  <div class="card-body">
+    <p class="card-text">{{product.name}}</p>
+    <p class="card-text">{{product.price}}</p>
+  </div>
+</div>
+       {% endfor %}
+  </div>
+    <div class="mx-auto">
+        {% if products.paginator.num_pages > 1 %}
+        <hr>
+        <div class="text-center">
+            {% for pg in products.paginator.page_range %}
+            <a  href="?page={{pg}}" class="btn btn-light btn-sm {% if product.number == pg %} active {% endif %}" }>{{pg}}</a>
+            {% endfor %}
+
+
+        </div>
+        {% endif %}
+
+    </div>
+    <br>
+</div>
+{% endblock %}
